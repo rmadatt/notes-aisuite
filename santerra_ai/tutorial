@@ -1,0 +1,105 @@
+Part 1: Introduction to AI Suite (0:06 - 1:33)
+The speaker begins by introducing AI Suite, a new project developed by Andrew Ng and released on GitHub. The speaker works directly with Andrew at Deep Learning AI, leading special projects focused on innovative and unconventional topics. AI Suite is notable for being open-source and designed to benefit the broader AI community, similar to a previous project focused on translation released earlier in the year. The software is aimed at simplifying the process of switching between various Large Language Model (LLM) providers, offering a unified interface to interact with them. The speaker is excited about its potential benefits for students and AI practitioners, particularly those who work with different LLM providers and models in a consistent and standardized manner. The speaker also acknowledges Andrew Ng's role in the project's inception, alongside the contributions of collaborators, and provides their appreciation for the team's hard work.
+Part 2: Overview and Setup (1:34 - 2:59)
+The speaker dives into a demonstration of AI Suite, which functions as a lightweight wrapper for managing multiple LLM providers. The interface simplifies interaction with these providers, especially when switching between them. The demonstration begins with the installation of AI Suite in a Google Colab environment, with the speaker mentioning that a link will be provided in the notes for the audience to follow along. The speaker briefly goes through the installation steps and hides unnecessary outputs to maintain focus. To facilitate readability in Colab, a "pretty print" function is introduced, with settings adjusted for line width to ensure the output is easy to read. The initial setup includes API key entry for connecting with various LLM providers, bypassing the need for environment files in this specific demonstration context. The speaker shows how to manually enter the API key, which will be stored in a global variable for further use.
+Part 3: Interacting with the Model (3:00 - 5:13)
+With the setup complete, the speaker demonstrates how to interact with AI Suite using a minimal working example. The demonstration uses Grok (powered by the Llama model) to respond to user input through a simple chat interface. The speaker initiates a chat, asking the model to say "hello," and the model responds with "How can I assist you?" To streamline the process for future interactions, the speaker wraps the chat functionality into a single function called ask, which handles the query and returns the response in a simplified manner. This single-use function avoids the need for multiple lines of code in more straightforward interactions, focusing on one-shot questions and answers without memory. The speaker tests this by asking the model, "What is the capital of Japan?" The response is "Tokyo," demonstrating the basic functionality.
+Part 4: Multi-Provider Interactions (5:13 - 6:29)
+The real value of AI Suite, according to the speaker, lies in its ability to seamlessly switch between multiple LLM providers. The speaker demonstrates this by interacting with three different LLM models: Grok, Anthropic (Claude), and OpenAI. Each model is queried with the same question: "Who is your creator?" The models respond differently: Grok answers "Meta," referring to the Llama model's provider, Anthropic recognizes itself as the creator, and OpenAI answers similarly. This illustrates how the system can easily swap between different providers by changing a single parameter, showcasing its flexibility in handling different models. The speaker then highlights the importance of comparing responses across different providers and models to evaluate their performance.
+Part 5: Comparing Multiple Models from the Same Provider (6:29 - 7:48)
+The demonstration continues with an exploration of how AI Suite allows users to work with multiple models from the same provider. In this case, the speaker uses different models from Grok (the provider) to generate various answers. The speaker prompts each model to write a short sentence explaining the origins of AI, and the responses vary slightly. One model mentions the Dartmouth conference of 1956, while another uses the 1950s to refer to the origins. This variability across models from the same provider highlights the differences in responses depending on the specific model used. The speaker emphasizes that AI Suite makes it easy to compare these models, thus aiding users in selecting the most suitable one for their needs.
+Part 6: Comparing Models Across Providers (7:49 - 8:55)
+Next, the speaker demonstrates a more advanced use case where AI Suite compares models from different providers using the same question. The question posed to each model is: "Can you quickly write a one-sentence explanation of the origins of AI?" Each model provides a slightly different response, reflecting the nuances of their respective training and architecture. The Grok model gives a response centered on the 1950s, OpenAI uses slightly different phrasing, and Anthropic offers yet another variation. The speaker acknowledges that while the differences in responses might not seem striking in this simple example, more complex tasks could yield more significant differences in model outputs, which would be more interesting to explore.
+Part 7: Real-World Use Case and Evaluation (8:55 - 11:03)
+In the final segment, the speaker shifts focus to a practical, real-world use case where AI Suite is used to compare models in a more controlled, iterative manner. The scenario involves using multiple models to generate and answer a question. The speaker sets up a process where one model generates a question, and the other two models answer it. The process is randomized to ensure that no single provider is favored, and each cycle uses different combinations of models for generating the question and providing answers. The user evaluates the responses by selecting the best option, and feedback is stored for analysis. For example, the first question is about the potential benefits and risks of AI in healthcare. The speaker emphasizes that this approach could be expanded to a larger set of questions and models, allowing for more robust analysis over a larger sample size. At the end of the process, the collected feedback could be used to determine which model performs best under different conditions. The demonstration showcases how AI Suite can facilitate the comparison and evaluation of multiple AI models in a controlled, reproducible way.
+Part 8: Conclusion and Invitation for Feedback (11:04 - 11:20)
+The speaker concludes by expressing their hope that the demonstration has provided a clear introduction to AI Suite and its potential value. They share their excitement about the software and acknowledge how many of their own use cases could have benefited from such a tool. The speaker invites feedback from the audience, encouraging them to share their thoughts either in the comments on LinkedIn or, preferably, by making pull requests to improve the software through contributions to the GitHub repository. This call for user feedback emphasizes the open-source nature of the project and the desire to make AI Suite stronger by addressing the needs of the broader community.
+Part 9: For Beginners
+As someone who is starting out with AI projects on GitHub, AI Suite could be a valuable tool, depending on the type of projects you're working on. Here's a breakdown of what AI Suite means for beginners like you and how it can help:
+What is AI Suite?
+AI Suite is an open-source library designed to simplify how you interact with different Large Language Models (LLMs), such as those from OpenAI, Anthropic, and Grok. The primary advantage of AI Suite is that it provides a unified interface to work with these multiple LLM providers. Instead of learning how to use each LLM’s API (which can be time-consuming and complicated), AI Suite standardizes the process, making it easier to switch between models or providers with minimal code changes.
+Should You Use AI Suite?
+If you're working with multiple LLMs or if you want to easily switch between them, AI Suite can save you a lot of time. Here are some situations where AI Suite could be helpful for you:
+Working with multiple AI providers: If your project requires using models from different companies or organizations (e.g., OpenAI's GPT-3, Anthropic's Claude, Grok's Llama), AI Suite allows you to interact with all these models in a consistent way, making it much easier to compare their performance or choose the best one for your task.
+
+
+Simplifying API interactions: If you’re tired of managing different APIs and learning different syntax for each one, AI Suite provides a standardized approach, which means you can focus more on your project rather than the technicalities of integrating each model.
+
+
+Quick testing and prototyping: If you're experimenting with different AI models for a project or just learning, AI Suite allows you to quickly switch between models, making it easier to test which model fits your needs without needing to rewrite a lot of code each time.
+
+
+For educational purposes: If you're learning how to use LLMs, AI Suite can be an excellent tool to experiment with different models and understand how they behave. It can also be a great resource for students or newcomers to AI.
+
+
+How Can You Use It?
+If you want to start using AI Suite in your AI projects, here are some basic use cases:
+Compare LLMs: You could use AI Suite to ask the same question to different LLM models (like asking "What’s the capital of Japan?" to both Grok, OpenAI, and Anthropic) and compare their responses. This helps you understand the differences between the models and choose the best one for specific tasks.
+
+
+Switching between models effortlessly: You can easily switch between models by just changing a parameter, without having to rewrite any other parts of your code.
+
+
+Create versatile chatbots: If you're building a chatbot that needs to respond to user queries, AI Suite can help you easily integrate multiple models to see which one performs best, depending on the specific context or type of questions.
+
+
+Experiment with model performance: You can also use AI Suite to experiment with multiple models under the same conditions (same input prompt) to evaluate their performance or suitability for particular tasks (e.g., summarization, content generation, etc.).
+
+
+Final Thoughts
+For a beginner, AI Suite provides a simplified workflow for working with different LLMs, which can be a huge time-saver. If you find yourself experimenting with AI models or want to try various providers in a seamless way, it's definitely worth considering. It helps you avoid dealing with the repetitive and tedious aspects of switching between APIs, allowing you to focus on the more interesting and creative parts of your project.
+If you're still starting out, it might take a little while to get comfortable with using AI Suite, but it could be a great tool to add to your toolkit as you continue building AI projects on GitHub. Plus, since it's open-source, you can contribute to improving it as you learn more!
+Part 10: Code
+To get started with AI Suite, the first thing you'll need is to install it and set up your environment. Since AI Suite is a Python-based library, you can use it in Google Colab, Jupyter Notebooks, or any Python environment that supports pip (the Python package manager). Google Colab and Jupyter Notebooks are great for beginners because they allow you to write and execute code in an interactive manner, which is perfect for experimenting with AI models.
+Setting up AI Suite: The First Line of Code
+Install AI Suite: Before you can use AI Suite, you need to install it. In Google Colab or Jupyter Notebook, the first thing you'll do is install the library. You can do this by running the following command in a code cell:
+
+ !pip install aisuite
+ This will install the AI Suite package from PyPI, allowing you to start using it in your notebook.
+
+
+Importing AI Suite: Once the installation is complete, you can import the library into your notebook by adding the following line of code:
+
+ import aisuite as AI
+ This will give you access to the AI Suite functionalities, which you can use to interact with multiple LLM providers.
+
+
+Example Setup in Google Colab or Jupyter Notebook
+Here’s a simple flow of how you can start using AI Suite in a Google Colab or Jupyter Notebook:
+Install AI Suite: Run this command in the first cell to install the library:
+
+ !pip install aisuite
+
+
+Import the Library: In the next cell, import AI Suite:
+
+ import aisuite as AI
+
+
+Set up API Keys: AI Suite will require API keys from various LLM providers (e.g., OpenAI, Anthropic, or Grok). You'll need to set these up in your environment. In a notebook, you can either manually input them or store them as environment variables.
+
+ Here’s an example of how to set the API key for OpenAI:
+
+ import os
+os.environ["OPENAI_API_KEY"] = "your_openai_api_key_here"
+
+
+Use AI Suite to Interact with Models: Now, you can start interacting with different AI models. For example, you can create a client and query an LLM using AI Suite.
+
+ Here's a basic example of interacting with an LLM:
+
+ client = AI.Client()
+response = client.ask("What is the capital of Japan?")
+print(response)
+ This will call an LLM, ask the question, and print the response.
+
+
+In Summary:
+You can use AI Suite in Google Colab, Jupyter Notebooks, or any Python environment.
+The first line of code is !pip install aisuite to install the library.
+After installation, you import the library with import aisuite as AI.
+You then need to set up API keys for the models you want to use (OpenAI, Anthropic, etc.).
+Finally, you can start using the AI.Client() to interact with different LLMs.
+Once you’ve set up your environment, you can begin experimenting with different AI models, querying them, and exploring how they perform with different inputs and tasks.
+
+
